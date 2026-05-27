@@ -33,7 +33,7 @@ header_menu: false
       <i class="fa fa-heart"></i>
       <div>
         <strong>Craftsmanship Sparks Joy</strong>
-        <p>We like writing code and creating art ourselves.</p>
+        <p>We love writing code and creating art ourselves.</p>
       </div>
     </div>
     <div class="ai-tenet">
