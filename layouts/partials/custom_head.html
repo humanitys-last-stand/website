@@ -1,0 +1,309 @@
+<!-- A partial to be overwritten by the user.
+     Its content will appear before the closing </head>-tag -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Hanalei+Fill&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    /* Cover / Landing area - white text over video */
+    --cover-text-color: #ffffff;
+    --cover-title-text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+    --highlight: #4a90d9;
+    --highlight-contrast: #ffffff;
+    --highlight-inverse: #1a2744;
+    --highlight-inverse-contrast: #ffffff;
+
+    /* Sticky nav menu - light blue */
+    --sticky-menu-text-color: #5ba3e6;
+
+    /* Dark sections - dark slate gray instead of red */
+    --section-dark-bg-color: #2b2b2b;
+
+    /* Footer - dark blue */
+    --footer-color-background: #0d1b2a;
+}
+
+/* Hide the chef hat logo */
+#blog-logo {
+    display: none !important;
+}
+
+/* Epic font for header title with gradient */
+#site-head .blog-title {
+    font-family: 'Hanalei Fill', cursive;
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #ffffff 0%, #5ba3e6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Style buttons as icon-only */
+#site-head a.btn {
+    background-color: #4a90d9;
+    border: none;
+    color: transparent;
+    font-size: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-top: 1rem;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+#site-head a.btn:hover {
+    background-color: #3a7bc8;
+    color: transparent;
+}
+
+#site-head a.btn::before {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    font-size: 22px;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-indent: 0;
+}
+
+#site-head a.btn[href*="discord"]::before {
+    content: '\f392';
+}
+
+#site-head a.btn[href*="github"]::before {
+    content: '\f09b';
+}
+
+#site-head a.btn[href*="porschiey"]::before,
+#site-head a.btn[href*="dev."]::before {
+    font-family: 'Font Awesome 6 Free' !important;
+    font-weight: 900 !important;
+    content: '\f1ea';
+}
+
+/* Hide the template icons */
+#site-head a.btn i {
+    display: none;
+}
+
+/* Responsive title scaling */
+@media only screen and (max-width: 1130px) {
+    #site-head .blog-title {
+        font-size: 5rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #site-head .blog-title {
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #site-head .blog-title {
+        font-size: 2.5rem;
+        letter-spacing: 0px;
+    }
+    #site-head a.btn {
+        width: 38px;
+        height: 38px;
+    }
+    #site-head a.btn::before {
+        font-size: 18px;
+    }
+}
+
+/* Down arrow hidden */
+#site-head #header-arrow {
+    display: none;
+}
+
+/* Scroll indicator arrow at bottom of landing */
+#site-head::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ===== Values Cards ===== */
+.values-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    line-height: normal;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.value-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+    color: #5ba3e6;
+}
+
+.value-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    font-size: 1.4rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* ===== AI Policy ===== */
+.ai-policy {
+    margin-top: 3rem;
+}
+
+.ai-policy h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.ai-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.7;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.ai-tenets {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.ai-tenet {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    line-height: normal;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #5ba3e6;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.2rem;
+}
+
+.ai-tenet > i {
+    font-size: 1.6rem;
+    color: #5ba3e6;
+}
+
+.ai-tenet strong {
+    font-size: 1.6rem;
+}
+
+.ai-tenet p {
+    font-size: 1.4rem;
+    opacity: 0.85;
+    margin: 0.2rem 0 0 0;
+}
+
+.ai-rules {
+    list-style: none !important;
+    padding-left: 0;
+}
+
+.ai-rules li {
+    margin-left: 0;
+    padding: 0.8rem 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    list-style: none !important;
+}
+
+.ai-rules li::before {
+    display: none !important;
+}
+
+.ai-rules li .fa-li {
+    display: none !important;
+}
+
+.ai-rules li i {
+    color: #5ba3e6;
+    margin-right: 0.5rem;
+    width: 1.5em;
+    text-align: center;
+}
+
+/* Responsive values cards */
+@media only screen and (max-width: 768px) {
+    .values-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ai-tenet {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+</style>
+
+<!-- Custom CSS via "custom.css"-file
+     If you would rather place your custom CSS into
+     a separate file, create a "custom.css" in your
+     local "static/css"-directory. Then add a <link>-tag
+     referencing your "custom.css" like so: -->
+
+<!-- <link rel="stylesheet" href='{{ "css/custom.css" | absURL }}'> -->
+
+<!-- Custom CSS: Color Codes
+     You may checkout https://htmlcolorcodes.com/ to get those
+     weird color codes (like "#22343A") ;-). -->
+
+<!-- Custom link-tags for different icons
+     Generated via https://favicon.io/favicon-generator/ -->
+
+{{ with resources.Get "images/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
+{{ with resources.Get "images/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />{{ end }}
+{{ range seq 9 4 }}{{ $size := pow 2 . }}{{ $file := replace "images/favicon-##x##.png" "##" $size }}{{ with resources.Get $file }}
+<link rel="icon" type="{{ .MediaType.Type }}" sizes="{{- $size -}}x{{- $size -}}" href="{{ .RelPermalink }}" />{{ end }}{{ end }}
+
