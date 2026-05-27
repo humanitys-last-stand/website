@@ -52,6 +52,6 @@ header_menu: false
     </div>
   </div>
 
-  <b>Read more specifics in our </b> <a href="https://dev.porschiey.io">blog post<a>
+  <b>Read more specifics in our </b> <a href="/ai-policy">full AI policy<a>.
 </div>
 {{</rawhtml>}}
