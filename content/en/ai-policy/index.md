@@ -8,9 +8,10 @@ weight: 1
 ### Nopes
 - No generative AI in our code bases or art assets. This includes code copied from an external generative source, unit test writing, placeholder art, and/or placeholder audio, and more.
 - AI tools used to create documentation, PRs, automate builds, write unit tests, etc are not permitted.
+- AI tools will not be used to create content for social media.
 
 ## Sometimes
-- AI tools may on occasion be used to analyze, debug, or look up ideas (akin to Googling or seeking assistance on StackOverflow) if the model can be run locally* or run within our network.
+- AI tools may on occasion be used to analyze, debug, or lookup ideas (akin to Googling or seeking assistance on StackOverflow).
 
 This means that even this website, all of its code, the landing art, the text you're reading, and all the rest are not AI generated, but instead are hand crafted. Typoz included.
 
