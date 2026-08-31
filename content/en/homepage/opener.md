@@ -3,7 +3,7 @@ title: "About"
 weight: 1
 ---
 
-**Humanity's Last Stand** is a small indie game studio focused on building games that we want to play, without using Generative AI in our assets. The world has been taken by the storm of AI, and while we see a growing list of reasons to embrace it - we have chosen to aim for craftsmanship, so we have purposesly made it part of our creed to look forgo nearly all usages of AI while building. We know that this may come at the sacrifice of speed - but that's the thing.
+**Humanity's Last Stand** is a small indie game studio focused on building games that we want to play, without using Generative AI in our assets. The world has been taken by the storm of AI, and while we see a growing list of reasons to embrace it - we have chosen to aim for craftsmanship, so we have purposesly made it part of our creed to forgo nearly all usages of AI while building. We know that this may come at the sacrifice of speed - but that's the thing.
 
 > We really enjoy crafting things ourselves.
 
