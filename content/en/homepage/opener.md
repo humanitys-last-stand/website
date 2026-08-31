@@ -11,4 +11,4 @@ We want the joy of creating something out of nothing and favor the right to clai
 
 ### The Team
 
-HLS is co-founded by two gamers who together have ?? years in the software industry and 16 years in the gaming industry; having worked on titles like [Halo](https://halowaypoint.com), [Minecraft](https://minecraft.net), [World of Warcraft](https://worldofwarcraft.blizzard.com/), and more. Fatigued by the state of the tech and gaming industry today, the two friends have decided to bind together, start a business, and hand craft the games they want to play.
+HLS is co-founded by two gamers who together have 20 years in the software industry and 16 years in the gaming industry; having worked on titles like [Halo](https://halowaypoint.com), [Minecraft](https://minecraft.net), [World of Warcraft](https://worldofwarcraft.blizzard.com/), and more. Fatigued by the state of the tech and gaming industry today, the two friends have decided to bind together, start a business, and hand craft the games they want to play.
