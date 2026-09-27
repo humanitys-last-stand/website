@@ -92,7 +92,7 @@
 	{{ end }}
 
         <div id="site-head-content" class="inner">
-	    {{ with resources.Get .Params.header_logo }}<img id="blog-logo" alt="" src="{{ .RelPermalink }}" />{{ end }}
+	    <img style="width: 60%;" alt="" src="images/logo.png" /> <br />
 
             {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
               {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}

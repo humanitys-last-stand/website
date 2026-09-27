@@ -10,8 +10,10 @@ header_use_video: true
 # header_logo: "images/chef-hat.png"
 #
 # Headers are safeHTML, you can use HTML tags such as b,i,u,br
-header_headline: "Humanity's<br>Last Stand"
+header_headline: ""
 header_subheadline: ""
+
+header_logo: "images/logo.png"
 
 # Add a 'Go back to top' item to the navigation menu
 # Title: name of navigation menu entry
