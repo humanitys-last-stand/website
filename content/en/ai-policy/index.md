@@ -9,9 +9,10 @@ weight: 1
 - No generative AI in our code bases or art assets. This includes code copied from an external generative source, unit test writing, placeholder art, and/or placeholder audio, and more.
 - AI tools used to create documentation, PRs, automate builds, write unit tests, etc are not permitted.
 - AI tools will not be used to create content for social media.
+- All creators who comission for the game (art, music, assets) must sign & certify no AI usage in their creation
 
-## Sometimes
-- AI tools may on occasion be used to analyze, debug, or lookup ideas (akin to Googling or seeking assistance on StackOverflow).
+### Sometimes
+- AI tools may on occasion be used to analyze, research, debug, or lookup ideas. Examples: Alternative to "Googling", competitive anayalsis, legal learning, marketing research, debugging a shader, or similar activities
 
 This means that even this website, all of its code, the landing art, the text you're reading, and all the rest are not AI generated, but instead are hand crafted. Typoz included.
 
@@ -19,6 +20,12 @@ This means that even this website, all of its code, the landing art, the text yo
 
 ### Local models?
 We have at our disposal a few build servers that can mint builds of the games we create. If we can find an ethically sourced local model to run on those servers to help us build our games, we will consider it. These models will not, however, be used to write code or generate art. 
+
+### Does AI have access to your codebase?
+We have no active models, agents, or tools that maintain regular access to our codebase. If we're stuck on something and need to debug, we may give read-only access in private sessions to models. Although our feelings are mixed on options like agent code reviews, we currently do not have them enabled.
+
+### What HAVE you used AI for?
+Competitive analysis, marketing research, the occassional debug session. And of course, unintentionally when Googling something or using a website that automatically activates it. 
 
 ### What about AI *in the game?*
 For now, any "AI" in our games will be in the classical sense of the word, but we may investigate options to add ML and/or local models. They would have to be specifically trained on the game and for the game in order to power experiences. These models/features/modes will not call out to third party services to perform inference or generation.
