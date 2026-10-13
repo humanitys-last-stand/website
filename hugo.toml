@@ -115,3 +115,13 @@ enableEmoji = true
     weight = 10
     languageName = "English"
     contentDir = "content/en"
+
+# Generate /llms.txt (a plain-text site summary for AI assistants) from layouts/home.llms.txt
+[outputFormats.llms]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+    home = ["HTML", "llms"]
