@@ -1,4 +1,8 @@
 ---
+# Search result / link preview title and description for the homepage
+title: "Humanity's Last Stand – Echo Ridge, a hand-crafted mystery game"
+description: "Echo Ridge is a first-person mystery set at a remote forest cabin, built entirely by hand by indie studio Humanity's Last Stand. Wishlist it on Steam."
+#
 # Striking header background image, Ideal images are homogenous around the centre and contrasting to the text. Non-ideal images can use `title_guard`
 header_image: "images/cover-image.jpg"
 #

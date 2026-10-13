@@ -1,7 +1,7 @@
 ---
 title: "Values"
 header_menu_title: "Values"
-navigation_menu_title: "Values"
+navigation_menu_title: "Our Values"
 weight: 2
 header_menu: false
 ---

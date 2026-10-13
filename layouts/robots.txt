@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# To keep AI-training crawlers out (does not affect search engine ranking),
+# uncomment the blocks below.
+# User-agent: GPTBot
+# User-agent: ClaudeBot
+# User-agent: CCBot
+# User-agent: Google-Extended
+# User-agent: Applebot-Extended
+# User-agent: meta-externalagent
+# Disallow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}

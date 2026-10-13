@@ -1,7 +1,10 @@
-baseURL = "https://example.com"
+baseURL = "https://www.humanslaststand.games/"
 
 # This is a "one page"-website, so we do not need these kinds of pages...
-disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+disableKinds = ["section", "taxonomy", "term", "RSS"]
+
+# Generate /robots.txt from layouts/robots.txt
+enableRobotsTXT = true
 
 defaultContentLanguage = "en"
 
@@ -27,7 +30,8 @@ enableEmoji = true
     # services like Twitter or Slack want to generate a preview of a link to your site.
     # See https://gohugo.io/templates/internal#twitter-cards and https://gohugo.io/templates/internal#open-graph.
     # NOT the actual header background image, go to _index.md instead
-    images = ["images/cover-image.jpg"]
+    # 1200x630 social preview image, also used as the game image in the structured data
+    images = ["images/og-echo-ridge.jpg"]
 
     # When set true, it creates a visual guard (partially transparent rounded box), preventing non-ideal background images from interfering with title/description headings
     # Ideal images are homogenous around the centre and contrasting to the text.
@@ -59,13 +63,16 @@ enableEmoji = true
     hidedesignbyline = true
 
     # The sections of the home page alternate styling. Mark invert as true to swap the styling of the sections
-    invertSectionColors = false
+    invertSectionColors = true
 
     # Options used for automatic image generation. see: https://gohugo.io/content-management/image-processing/
     image_options = "webp q90 lanczos photo"
 
     # Use "page_title | site_title" for <title> tags
     combine_page_and_site_title = false
+
+    steam_url = "https://steampowered.com"
+    trailer_url = "https://youtube.com/watch?v=123"
 
     [params.footer]
     # Show contact icons for email/phone (if specified) in the footer of the page
@@ -75,7 +82,7 @@ enableEmoji = true
     showFooterLinks = false
 
     [params.meta]
-        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
+        keywords = "Echo Ridge, Humanity's Last Stand, indie game studio, first-person mystery game, Steam, hand-crafted games, no generative AI"
 
     [[params.contacts]]
         label = "phone"
@@ -108,9 +115,3 @@ enableEmoji = true
     weight = 10
     languageName = "English"
     contentDir = "content/en"
-
-  [languages.de]
-    title = "Erika Musterfrau - Ernährungshilfe & Kochberatung"
-    weight = 20
-    contentDir = "content/de"
-    languageName = "Deutsch"

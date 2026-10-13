@@ -1,6 +1,40 @@
 <!-- A partial to be overwritten by the user.
      Its content will appear before the closing </head>-tag -->
 
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ if .IsHome }}
+{{/* Structured data: the studio, its social profiles (from the header links), and the game */}}
+{{ $studioID := printf "%s#studio" site.BaseURL }}
+{{ $sameAs := slice }}
+{{ with site.GetPage "/homepage" }}
+  {{ range where (.Resources.ByType "page") "Params.header_menu" true }}
+    {{ with .Params.external }}{{ $sameAs = $sameAs | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $studio := dict
+  "@type" "Organization"
+  "@id" $studioID
+  "name" site.Title
+  "url" site.BaseURL
+  "logo" ("images/logo.png" | absURL)
+  "sameAs" $sameAs
+}}
+{{ $game := dict
+  "@type" "VideoGame"
+  "name" "Echo Ridge"
+  "description" "A first-person mystery set at a remote forest cabin where time is not your ally. Find your way out before dawn, or start again from scratch."
+  "url" site.Params.steam_url
+  "image" (index site.Params.images 0 | absURL)
+  "gamePlatform" "PC"
+  "genre" (slice "Mystery" "Adventure")
+  "author" (dict "@id" $studioID)
+  "publisher" (dict "@id" $studioID)
+}}
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@graph" (slice $studio $game) | jsonify | safeJS }}
+</script>
+{{ end }}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +60,46 @@
     --footer-color-background: #0d1b2a;
 }
 
+/* Logo is wrapped in an <h1> for search engines; keep it looking like a plain image */
+#site-head .site-logo {
+    margin: 0;
+    line-height: 0;
+}
+
 /* Hide the chef hat logo */
 #blog-logo {
     display: none !important;
+}
+
+.hero-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 0.5rem;
+}
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 2.2rem;
+    border-radius: 8px;
+    font-family: "roboto slab", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: transform .15s ease, background .15s ease;
+}
+.cta-btn:hover { transform: translateY(-2px); color: #fff; }
+.cta-primary   { background: #4a90d9; }
+.cta-primary:hover { background: #3a7bc8; }
+.cta-secondary { background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.6); }
+.cta-secondary:hover { background: rgba(255,255,255,.22); }
+
+@media only screen and (max-width: 500px) {
+    .hero-ctas { flex-direction: column; align-items: stretch; padding: 0 1.6rem; }
+    .cta-btn  { justify-content: center; font-size: 1.5rem; }
 }
 
 /* Epic font for header title with gradient */
@@ -90,6 +161,10 @@
 
 #site-head a.btn[href*="github"]::before {
     content: '\f09b';
+}
+
+#site-head a.btn[href*="tiktok"]::before {
+    content: '\e07b';
 }
 
 #site-head a.btn[href*="porschiey"]::before,
@@ -288,6 +363,25 @@
         align-items: center;
         gap: 0.6rem;
         padding: 1.4rem 1.5rem;
+    }
+}
+
+/* ===== Echo Ridge section background ===== */
+/* Targets the full-width wrapper, not the narrow article column */
+.post-holder:has(> #echo-ridge) {
+    --echo-ridge-bg: url("/images/echo-ridge-cabin.PNG");
+    background:
+        linear-gradient(
+            rgba(43, 43, 43, 0.70) 0%,
+            rgba(43, 43, 43, 0.85) 75%,
+            rgba(43, 43, 43, 1.00) 100%
+        ),
+        var(--echo-ridge-bg) center / cover no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+    .post-holder:has(> #echo-ridge) {
+        --echo-ridge-bg: url("/images/echo-ridge-cabin_Mobile.png");
     }
 }
 </style>
