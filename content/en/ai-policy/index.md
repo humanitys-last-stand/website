@@ -1,5 +1,6 @@
 ---
 title: "Deeper Dive into our AI Policy"
+description: "How Humanity's Last Stand makes games without generative AI: what we don't use, what we do, and what we ask of the artists and musicians we work with."
 weight: 1
 ---
 

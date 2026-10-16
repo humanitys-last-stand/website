@@ -1,5 +1,7 @@
 ---
 title: Hugo Scroll License
+sitemap:
+  disable: true
 ---
 
 The MIT License (MIT)

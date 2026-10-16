@@ -1,0 +1,21 @@
+# {{ site.Title }}
+
+> {{ site.Title }} is a small indie game studio that hand-crafts its games without generative AI. Its first game, Echo Ridge, is a first-person mystery coming to Steam.
+
+## Echo Ridge
+
+Echo Ridge is a first-person mystery set at a remote forest cabin where time is not your ally. An anomaly has caused you to lose your means of transportation, and you must find your way out before dawn, or else start from scratch again.
+
+- [Echo Ridge on Steam (wishlist)]({{ site.Params.steam_url }})
+- [Echo Ridge trailer]({{ site.Params.trailer_url }})
+
+## The studio
+
+{{ site.Title }} was co-founded by two gamers with 20 years in the software industry and 16 years in the gaming industry, who have worked on titles like Halo, Minecraft, and World of Warcraft.
+
+- [Homepage]({{ site.BaseURL }})
+- [AI policy: how the studio makes games without generative AI]({{ "ai-policy/" | absURL }})
+
+## Community
+{{ with site.GetPage "/homepage" }}{{ range $link := where (.Resources.ByType "page") "Params.header_menu" true }}{{ with $link.Params.external }}
+- [{{ $link.Title }}]({{ . }}){{ end }}{{ end }}{{ end }}
